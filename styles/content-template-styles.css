@@ -199,6 +199,7 @@ main a[href] {
     color: royalblue;
 }
 main a[href*="http"]::after{
+    content: " ↗";
     content: " 🡥";
 }
 main a[href]:hover {
