@@ -6,7 +6,7 @@ function LoadContent(){
         return;
     let pg = url[url.length-1];
     url = pg.split("#");
-    pg = "module1\\";
+    pg = "module1/";
     pg += url[0];
     pg += ".html";
     
@@ -74,7 +74,13 @@ subheadsText += "</ul>";
 let curNav = document.querySelector(".here").parentElement; //the list item
 curNav.innerHTML += subheadsText;
 
-//Button workings
+//navi-toggle workings
+let aside = document.querySelector("aside");
+let toggle = document.querySelector(".navi-toggle");
+let width = window.innerWidth;
+window.addEventListener('resize', navOrNo);
+toggle.onclick = function(){showNavigation();}
+
 function navOrNo(){
     if(window.innerWidth != width)
     {
@@ -112,21 +118,6 @@ function showNavigation() {
     }
 }
 
-
-var aside = document.querySelector("aside");
-var toggle = document.querySelector(".navi-toggle");
-var width = window.innerWidth;
-window.addEventListener('resize', navOrNo);
-toggle.onclick = function(){showNavigation();}
-
-
-//linking current styles and scripts
-let pg = window.location.href.split("?");
-pg = pg[pg.length-1];
-
-document.querySelector("#cur-styles").href = "styles\\" + pg + "-styles.css";
-document.querySelector("#cur-script").src = pg + "-script.css";
-
 //searchBar workings
 let searchBar = document.querySelector(".search");
 let searchInput = document.querySelector(".search input");
@@ -154,3 +145,10 @@ searchInput.addEventListener('input', function(){
     }
 });
 
+//linking current styles
+let pg = window.location.href.split("?");
+if(pg.length > 1)
+{
+    pg = pg[pg.length-1];
+    document.querySelector("#cur-styles").href = "styles/" + pg + "-styles.css";
+}
