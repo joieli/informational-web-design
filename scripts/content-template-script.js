@@ -6,7 +6,8 @@ function LoadContent(){
         return;
     let pg = url[url.length-1];
     url = pg.split("#");
-    pg = url[0];
+    pg = "module1\\";
+    pg += url[0];
     pg += ".html";
     
     let request = new XMLHttpRequest();
@@ -16,7 +17,7 @@ function LoadContent(){
             if (this.status == 200) 
                 content.innerHTML = this.responseText;
             else if (this.status == 404)
-                content.innerHTML = "Page not found.";
+                content.innerHTML = "Error 404 Page not found.";
         }
     }
     request.open("GET", pg, false);
