@@ -76,22 +76,26 @@ curNav.innerHTML += subheadsText;
 
 //Button workings
 function navOrNo(){
-    if(window.innerWidth < 800)
+    if(window.innerWidth != width)
     {
-        document.querySelector("main").style.marginInlineStart = "0px";
-        document.querySelector(".prev-next").style.marginInlineStart = "0px";
-        document.querySelector("footer").style.marginInlineStart = "0px";
-        aside.style.left = "-266px";
-        toggle.style.left = "0px";
-        toggle.onclick = function() {showNavigation();}
-    }
-    else
-    {
-        document.querySelector("main").style.marginInlineStart = "266px";
-        document.querySelector(".prev-next").style.marginInlineStart = "266px";
-        document.querySelector("footer").style.marginInlineStart = "270px";
-        aside.style.left = "0px";
-        toggle.style.left = "266px";
+        width = window.innerWidth;
+        if(window.innerWidth < 800)
+        {
+            document.querySelector("main").style.marginInlineStart = "0px";
+            document.querySelector(".prev-next").style.marginInlineStart = "0px";
+            document.querySelector("footer").style.marginInlineStart = "0px";
+            aside.style.left = "-266px";
+            toggle.style.left = "0px";
+            toggle.onclick = function() {showNavigation();}
+        }
+        else
+        {
+            document.querySelector("main").style.marginInlineStart = "266px";
+            document.querySelector(".prev-next").style.marginInlineStart = "266px";
+            document.querySelector("footer").style.marginInlineStart = "270px";
+            aside.style.left = "0px";
+            toggle.style.left = "266px";
+        }
     }
 }
 
@@ -111,6 +115,7 @@ function showNavigation() {
 
 var aside = document.querySelector("aside");
 var toggle = document.querySelector(".navi-toggle");
+var width = window.innerWidth;
 window.addEventListener('resize', navOrNo);
 toggle.onclick = function(){showNavigation();}
 
