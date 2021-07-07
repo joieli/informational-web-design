@@ -6,6 +6,7 @@ html, body {
     box-sizing: border-box;
     font-family: 'Source Sans Pro', Arial, sans-serif;
     height: 100%;
+    overflow: hidden;
 }
 *, *::before, *::after {
     box-sizing: inherit;
