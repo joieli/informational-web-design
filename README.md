@@ -1,4 +1,7 @@
-# web-dev-informational
-A responsive and semi-interactive content page template to be used for informational or educational purposes.
+# informational-web-design
+- User interface design for an informtional/education content page  
+- Design focuses around responsiveness and user experience  
+- Works on both mobile and desktop
 
-Demo: https://joieli.github.io/informational-web-design/
+See demo for more details ↓:  
+https://joieli.github.io/informational-web-design/
