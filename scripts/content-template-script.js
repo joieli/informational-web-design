@@ -81,17 +81,17 @@ function navOrNo(){
         document.querySelector("main").style.marginInlineStart = "0px";
         document.querySelector(".prev-next").style.marginInlineStart = "0px";
         document.querySelector("footer").style.marginInlineStart = "0px";
-        aside.style.left = "-265px";
+        aside.style.left = "-266px";
         toggle.style.left = "0px";
         toggle.onclick = function() {showNavigation();}
     }
     else
     {
-        document.querySelector("main").style.marginInlineStart = "265px";
-        document.querySelector(".prev-next").style.marginInlineStart = "265px";
+        document.querySelector("main").style.marginInlineStart = "266px";
+        document.querySelector(".prev-next").style.marginInlineStart = "266px";
         document.querySelector("footer").style.marginInlineStart = "270px";
         aside.style.left = "0px";
-        toggle.style.left = "265px";
+        toggle.style.left = "266px";
     }
 }
 
@@ -99,11 +99,11 @@ function showNavigation() {
     if(aside.style.left != "0px")
     {
         aside.style.left = "0px";
-        toggle.style.left = "265px";
+        toggle.style.left = "266px";
     }
     else
     {
-        aside.style.left = "-265px";
+        aside.style.left = "-266px";
         toggle.style.left = "0px";
     }
 }
