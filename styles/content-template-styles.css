@@ -90,7 +90,7 @@ aside {
     height: calc(100% - 66px);
     position: fixed;
     left: 0px;
-    bottom: 0px;
+    top: 66px;
     background-color: white;
 }
 aside:hover {
