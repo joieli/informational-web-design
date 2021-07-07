@@ -200,7 +200,6 @@ main a[href] {
 }
 main a[href*="http"]::after{
     content: " ↗";
-    content: " 🡥";
 }
 main a[href]:hover {
     text-decoration: none;

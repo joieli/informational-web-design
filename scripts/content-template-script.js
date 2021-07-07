@@ -125,7 +125,7 @@ let pg = window.location.href.split("?");
 pg = pg[pg.length-1];
 console.log(pg);
 
-document.querySelector("#cur-styles").href = pg + "-styles.css";
+document.querySelector("#cur-styles").href = "styles\\" + pg + "-styles.css";
 document.querySelector("#cur-script").src = pg + "-script.css";
 
 //searchBar workings
