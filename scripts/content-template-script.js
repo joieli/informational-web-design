@@ -35,7 +35,6 @@ document.getElementsByTagName("title")[0].textContent = modTitle.textContent + "
 let navHeads = document.querySelectorAll("nav a[href]:not(.group-header)");
 let prevButton = document.querySelectorAll(".prev-next a[href]")[0];
 let nextButton = document.querySelectorAll(".prev-next a[href]")[1];
-console.log(navHeads);
 for(let i = 0; i < navHeads.length; i++)
 {
     if(navHeads[i].textContent == pageTitle.textContent)
