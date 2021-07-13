@@ -126,17 +126,33 @@ aside::-webkit-scrollbar-thumb {
     align-items: center;
     justify-content: space-between;
 }
-.search input {
+.search input[type="search"] {
     border: none;
     height: 100%;
     width: 100%;
     padding-inline-start: 5px;
 }
-
-.search input:focus {
+.search input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+.search input[type="search"]:focus {
     outline: none;
     border: 2px solid royalblue;
     border-radius: 1em;
+}
+.search input[role='cancel'] {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: royalblue;
+    font-size: larger;
+}
+.search input[type='submit'] {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: royalblue;
+    font-size: larger;
 }
 
 

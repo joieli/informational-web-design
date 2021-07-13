@@ -19,14 +19,18 @@
                     <a href="" class="logo"><img src="images/70x30.png" alt="logo" ><span class="title">Info</span></a>
                     <ul>              
                         <li><a href="">About</a></li>
-                        <li><a href=""><img src="images/28x28.png" alt="icon"></a></li>
+                        <li><a href=""><img src="images/28x28.png" alt="web icon"></a></li>
                     </ul>
                 </div>
             </header>
             <aside>
-                <button class="navi-toggle">≡</button>
+                <button class="navi-toggle" aria-label="toggle navigation">≡</button>
                 <nav class="menu">
-                    <form class="search"><input type="search" placeholder="Search . . ."></form>
+                    <form class="search" role="search">
+                        <input type="search" placeholder="Search . . ." aria-label="search website">
+                        <input role="cancel" type="button" value="×" aria-label="return to navigation bar" hidden>
+                        <input type="submit" value="🔎︎" aria-label="submit search">
+                    </form>
                     <div class="navi">
                         <div id="tofc">
                             <div class="mod"><a href="index.html">Module 1</a></div>

@@ -119,30 +119,32 @@ function showNavigation() {
 }
 
 //searchBar workings
-let searchBar = document.querySelector(".search");
-let searchInput = document.querySelector(".search input");
+let searchBar = document.querySelector("form[role='search']");
+let searchInput = document.querySelector(".search input[type='search']");
 let TofC = document.querySelector("#tofc");
 let results = document.querySelector("#results");
+let cancel = document.querySelector(".search input[role='cancel']");
 
 searchBar.addEventListener('submit', function(event){
     event.preventDefault();
-});
-
-searchInput.addEventListener('search', function(){
-    TofC.style.display = "block";
-    results.setAttribute("hidden", "");
-});
-
-searchInput.addEventListener('input', function(){
-    if(searchInput.value === "")
+    if(searchInput.value !== "")
     {
-        TofC.style.display = "block";
-        results.setAttribute("hidden", "");
-    }
-    else{
+        TofC.removeAttribute("role");
         TofC.style.display = "none";
         results.removeAttribute("hidden");
+        cancel.removeAttribute("hidden");
+        results.setAttribute("role", "alert");
     }
+});
+
+cancel.addEventListener('click', function(event){
+    event.preventDefault();
+    searchInput.value = "";
+    results.removeAttribute("role");
+    results.setAttribute("hidden", "");
+    cancel.setAttribute("hidden", "");
+    TofC.style.display = "block";
+    TofC.setAttribute("role", "alert")
 });
 
 //linking current styles
